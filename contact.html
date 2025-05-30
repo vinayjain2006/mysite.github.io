@@ -51,7 +51,7 @@
             border-radius: 6px;
         }
 
-        form button {
+        .email-button {
             margin-top: 15px;
             padding: 10px;
             background: #1d3557;
@@ -59,9 +59,12 @@
             border: none;
             border-radius: 6px;
             cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        form button:hover {
+        .email-button:hover {
             background: #457b9d;
         }
     </style>
@@ -97,21 +100,34 @@
 
     <div class="contact-form">
         <h2>Send Us a Message</h2>
-        <form action="mailto:ajit@backlightav.com" method="post" enctype="text/plain">
+        <form id="emailForm" onsubmit="sendEmail(); return false;">
             <label for="name">Your Name</label>
-            <input type="text" name="name" id="name" required>
+            <input type="text" id="name" required>
 
             <label for="email">Your Email</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" id="email" required>
 
             <label for="message">Your Message</label>
-            <textarea name="message" id="message" rows="6" required></textarea>
+            <textarea id="message" rows="6" required></textarea>
 
-            <button type="submit">Send Message</button>
+            <a href="#" class="email-button" onclick="sendEmail()">Send Message</a>
         </form>
     </div>
 </main>
 
 <footer>© 2025 Backlight AV Technologies</footer>
+
+<script>
+        function sendEmail() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            const subject = encodeURIComponent("Website Inquiry from " + name);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+
+            window.location.href = `mailto:ajit@backlightav.com?subject=${subject}&body=${body}`;
+        }
+    </script>
 </body>
 </html>
