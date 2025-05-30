@@ -3,27 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - AV Solutions</title>
+    <title>Contact Us - Backlight AV</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .contact-info, .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            line-height: 1.8;
+        }
+
+        iframe {
+            width: 100%;
+            border: none;
+            height: 300px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin: 10px 0 5px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        form button {
+            margin-top: 15px;
+            padding: 10px;
+            background: #1d3557;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #457b9d;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <form>
-            BACKLIGHT AV TECHNOLOGIES
-            H502 Marvel Ideal Spacio Undri
-            Pune - 411060
-            Phone: (+91) 8602077708
-            Email: ajit@backlightav.com
+<header>
+    <h1>Contact Us</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main class="contact-container">
+    <div class="contact-info">
+        <h2>Backlight AV Technologies</h2>
+        <p>
+            H502 Marvel Ideal Spacio, Undri<br>
+            Pune - 411060, Maharashtra, India<br><br>
+            <strong>Phone:</strong> (+91) 8602077708<br>
+            <strong>Email:</strong> <a href="mailto:ajit@backlightav.com">ajit@backlightav.com</a>
+        </p>
+
+        <iframe
+                src="https://www.google.com/maps?q=Marvel+Ideal+Spacio+Undri+Pune&output=embed"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form action="mailto:ajit@backlightav.com" method="post" enctype="text/plain">
+            <label for="name">Your Name</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="message">Your Message</label>
+            <textarea name="message" id="message" rows="6" required></textarea>
+
+            <button type="submit">Send Message</button>
         </form>
-    </main>
-    <footer>© 2025 BACKLIGHT AV TECHNOLOGIES</footer>
+    </div>
+</main>
+
+<footer>© 2025 Backlight AV Technologies</footer>
 </body>
 </html>
