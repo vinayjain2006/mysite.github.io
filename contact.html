@@ -1,29 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Contact Us - AV Solutions</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
+<header>
+    <h1>Contact Us</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+<main>
+    <section style="margin-bottom: 40px; text-align: center;">
+        <h2>Get in Touch</h2>
+        <p>We’d love to hear from you! Fill out the form below or visit us at our office.</p>
+    </section>
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; align-items: flex-start;">
         <form>
-            <label>Name: <input type="text" name="name" required></label>
-            <label>Email: <input type="email" name="email" required></label>
-            <label>Message:<textarea name="message" required></textarea></label>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
             <button type="submit">Send</button>
         </form>
-    </main>
-    <footer>© 2025 Audio Video Solutions</footer>
+        <div style="max-width: 500px; flex: 1;">
+            <h3>Our Office</h3>
+            <p>BACKLIGHT AV TECHNOLOGIES<br/>
+                H502 Marvel Ideal Spacio Undri<br/>
+                Pune - 411060<br/>
+                Phone: (+91) 8602077708<br/>
+                Email: ajit@backlightav.com</p>
+            <div style="margin-top: 20px; border-radius: 10px; overflow: hidden;">
+                <iframe
+                        src="https://g.co/kgs/7kWR3ms"
+                        width="100%"
+                        height="300"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>© 2025 Audio Video Solutions</footer>
 </body>
-</html>
+</html>%
