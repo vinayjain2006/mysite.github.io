@@ -1,77 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Contact Us - Backlight AV</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <style>
-        .contact-container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 40px 20px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f8;
+    }
 
-        .contact-info, .contact-form {
-            flex: 1;
-            min-width: 300px;
-        }
+    header {
+      background-color: #002b5c;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
 
-        .contact-info h2 {
-            margin-bottom: 20px;
-        }
+    nav {
+      margin-top: 10px;
+    }
 
-        .contact-info p {
-            line-height: 1.8;
-        }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-        iframe {
-            width: 100%;
-            border: none;
-            height: 300px;
-            margin-top: 20px;
-            border-radius: 8px;
-        }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-        form {
-            display: flex;
-            flex-direction: column;
-        }
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    }
 
-        form label {
-            margin: 10px 0 5px;
-        }
+    .contact-info, .contact-form {
+      flex: 1;
+      min-width: 300px;
+    }
 
-        form input, form textarea {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-        }
+    .contact-info h2, .contact-form h2 {
+      margin-bottom: 20px;
+      color: #002b5c;
+    }
 
-        .email-button {
-            margin-top: 15px;
-            padding: 10px;
-            background: #1d3557;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .contact-info p {
+      line-height: 1.7;
+      font-size: 16px;
+    }
 
-        .email-button:hover {
-            background: #457b9d;
-        }
-    </style>
+    .contact-info a {
+      color: #002b5c;
+      text-decoration: none;
+    }
+
+    iframe {
+      width: 100%;
+      border: none;
+      height: 300px;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form label {
+      font-weight: 600;
+      margin: 10px 0 5px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact-form button {
+      background: #002b5c;
+      color: #fff;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #0147a0;
+    }
+
+    footer {
+      background: #002b5c;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
+
 <header>
-    <h1>Contact Us</h1>
     <nav>
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
@@ -84,9 +137,9 @@
     <div class="contact-info">
         <h2>Backlight AV Technologies</h2>
         <p>
-            H502 Marvel Ideal Spacio, Undri<br>
-            Pune - 411060, Maharashtra, India<br><br>
-            <strong>Phone:</strong> (+91) 8602077708<br>
+            H502 Marvel Ideal Spacio, Undri<br />
+            Pune - 411060, Maharashtra, India<br /><br />
+            <strong>Phone:</strong> (+91) 8602077708<br />
             <strong>Email:</strong> <a href="mailto:ajit@backlightav.com">ajit@backlightav.com</a>
         </p>
 
@@ -100,34 +153,26 @@
 
     <div class="contact-form">
         <h2>Send Us a Message</h2>
-        <form id="emailForm" onsubmit="sendEmail(); return false;">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" required>
+        <form action="https://formsubmit.co/ajit@backlightav.com" method="POST">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
 
-            <label for="email">Your Email</label>
-            <input type="email" id="email" required>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
 
-            <label for="message">Your Message</label>
-            <textarea id="message" rows="6" required></textarea>
+            <label for="message">Message</label>
+            <textarea name="message" id="message" required></textarea>
 
-            <a href="#" class="email-button" onclick="sendEmail()">Send Message</a>
+            <!-- Hidden options -->
+            <input type="hidden" name="_next" value="thankyou.html">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New message from Backlight AV Contact Form">
+
+            <button type="submit">Send Message</button>
         </form>
     </div>
 </main>
 
 <footer>© 2025 Backlight AV Technologies</footer>
-
-<script>
-        function sendEmail() {
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const message = document.getElementById("message").value;
-
-            const subject = encodeURIComponent("Website Inquiry from " + name);
-            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-
-            window.location.href = `mailto:ajit@backlightav.com?subject=${subject}&body=${body}`;
-        }
-    </script>
 </body>
 </html>
