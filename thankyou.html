@@ -2,27 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Thank You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - AV Solutions</title>
+  <link rel="stylesheet" href="css/style.css">
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
     body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
       font-family: Arial, sans-serif;
+    }
+
+    main {
+      flex: 1; /* Pushes footer down */
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    footer {
+      background: #002b5c;
+      color: white;
       text-align: center;
-      padding: 100px;
-      background: #f4f6f8;
+      padding: 20px;
     }
-    h1 {
-      color: #002b5c;
+
+    header {
+      background: #002b5c;
+      color: white;
+      padding: 20px;
+      text-align: center;
     }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      color: #002b5c;
+
+    nav a {
+      color: white;
+      margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+
 <header>
   <nav>
     <a href="index.html">Home</a>
@@ -31,8 +61,16 @@
     <a href="contact.html">Contact</a>
   </nav>
 </header>
-<h1>Thank You!</h1>
-<p>Your message has been sent successfully.</p>
-<a href="index.html">← Back to Home</a>
+
+<main>
+  <section>
+    <h2>Thank You!</h2>
+    <p>Your message has been sent successfully. We will get back to you at the earliest.</p>
+    <a href="index.html">← Back to Home</a>
+  </section>
+</main>
+
+<footer>© 2025 BACKLIGHT AV TECHNOLOGIES</footer>
+
 </body>
 </html>
